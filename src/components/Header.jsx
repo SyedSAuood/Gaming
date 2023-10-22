@@ -31,7 +31,7 @@ const Header = () => {
 
   <TooltipComponent content="Profile" position='BottomCenter' >
         <div className='flex items-center gap-2 cursor-pointer p-1
-        hover:bg-black transition-all rounded-lg' onClick={()=> handleClick('UserProfile')} >
+        hover:bg-black transition-all rounded-lg fixed md:right-8 ' onClick={()=> handleClick('UserProfile')} >
           <img src={userimage} alt='User_Image' className='rounded-full w-8 h-8'/>
             <p>
               <span className='text-14 text-gray-400' > Hi,</span>{' '}

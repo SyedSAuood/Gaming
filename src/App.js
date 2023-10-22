@@ -60,7 +60,7 @@ const App = () => {
                 : 'flex-2'}`
            
            }> 
-            <div className='fixed md:static 
+            <div className='fixed 
             bg-main-dark-bg
             dark:bg-secondary-dark-bg
             navbar w-full '>
@@ -74,12 +74,12 @@ const App = () => {
           <Route path='/' element={<Home games={games} />}/>
           <Route path='/Home' element={<Home games={games} />}/>
           {/* game route */}
-          <Route path='/Apex' element={<Apex/>}/>
-          <Route path='/FiFa' element={<Fifa/>}/>
-          <Route path='/CALLOFDUTY' element={<Callofduty/>}/>
-          <Route path='/Cs:go' element={<Csgo/>}/>
-          <Route path='/Dota 2' element={<Dota/>}/>
-          <Route path='/Mario' element={<Mario/>}/>
+          <Route path='/Apex' element={<Apex games={games}/>}/>
+          <Route path='/FiFa' element={<Fifa games={games}/>}/>
+          <Route path='/CALLOFDUTY' element={<Callofduty games={games}/>}/>
+          <Route path='/Cs:go' element={<Csgo games={games}/>}/>
+          <Route path='/Dota 2' element={<Dota games={games}/>}/>
+          <Route path='/Mario' element={<Mario games={games}/>}/>
           <Route path='/Valorant' element={<Valo games={games} />}/>
            {/* app route */}
 

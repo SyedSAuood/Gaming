@@ -79,10 +79,10 @@ export const links = [
         name: 'Valorant',
         icon: <img src={valoIcon} alt='valo' className='invert w-6'/>,
       },
-      {
-        name: 'LoL',
-        icon: <img src={lolIcon} alt='lol' className='invert w-6'/>,
-      },
+      // {
+      //   name: 'LoL',
+      //   icon: <img src={lolIcon} alt='lol' className='invert w-6'/>,
+      // },
       {
         name: 'CALLOFDUTY',
         icon: <img src={codIcon} alt='cod' className='invert w-6' />,

@@ -1,0 +1,50 @@
+.valorant {
+    background-image: url('../data/Valoimg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s; /* Add a transition for smooth resizing */
+    background-attachment: fixed;
+  }
+  
+  .cod {
+    background-image: url('../data/codimg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s; /* Add a transition for smooth resizing */
+    background-attachment: fixed;
+  }
+  
+  .fifa {
+    background-image: url('../data/fifa.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s; /* Add a transition for smooth resizing */
+    background-attachment: fixed;
+  }
+  
+  .csgo {
+    background-image: url('../data/csgo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s; /* Add a transition for smooth resizing */
+    background-attachment: fixed;
+  }
+  
+  .dota {
+    background-image: url('../data/dota.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s; /* Add a transition for smooth resizing */
+    background-attachment: fixed;
+  }
+  

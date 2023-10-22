@@ -1,47 +1,50 @@
-import React from 'react'
-//import './news.css'
-import { Typography } from 'antd'
-// import img from '../data/download.jpg'
-
-
+import React from 'react';
+import { Typography } from 'antd';
 
 const { Text } = Typography;
 
-
 const News = ({ games }) => {
   return (
-    <div className="mb-6 mt-4 flex flex-wrap ">
+<div className='p-5 bg-main-bg/50 max-w-screen-lg mx-auto rounded-[10px]  '>
+    <div className="pl-0 pr-[580px] py-0 flex flex-col items-start relative self-stretch w-full flex-[0_0_auto] ">
+        <div className=" ms-4 relative w-fit mt-[-1.00px] [font-family:'Barlow-Bold',Helvetica] font-bold text-white text-[18px] tracking-[0.15px] leading-[27px] whitespace-nowrap">
+          Gaming news
+        </div>
+      </div>
+    <div className="pt-4 mb-6 mt-4 relative place-content-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+      
       {games.map((item) => (
         <a
-          target='_blank'
-          rel='noreferrer'
+          target="_blank"
+          rel="noreferrer"
           href={item.trailer}
           key={item._id}
-          className='mb-4'
-          >
-
-
-          <div className="ms-6 relative h-[141px] ">
+          className="p-2 rounded-lg  overflow-hidden transform transition-transform duration-200 hover:scale-105 "
+        >
+          <div className="relative h-40">
             <img
-              className="w-[250px] h-[133.88px] rounded-[10px] "
+              className="relative w-full h-full hover:opacity-75 rounded-[10px] z-30"
               alt={Text}
               src={item.img}
+              
             />
 
-            <div className="absolute z-10 w-full h-[130px]  opacity-90 bottom-0  rounded-[10px] hover:bg-gradient-to-b hover:from-transparent hover:to-[rgba(11,12,23,0.9)]">
-              <div className="p-2">
-                <p className="mt-20 z-50 text-white  font-bold text-[14px] leading-[15.8px] hover:underline">
-                  {/* {item.description.length < 100 ? `${item.description.length.substring[]`}
-                   */}
-asdafseadsadfsgdsfdafdsf sdaafcqwafa fad...
+            <div className="absolute w-full h-full bottom-[-8px] ">
+              <div className="p-2 rounded-[10px] h-full ">
+                <p className="mt-24 text-white font-bold text-[14px] leading-[15.8px] hover:underline relative z-40">
+                  {/* Truncate the description if it's too long */}
+                  {item.description.length > 50
+                    ? `${item.description.substring(0, 50)}...`
+                    : item.description}
                 </p>
               </div>
             </div>
           </div>
-        </a>))}
+        </a>
+      ))}
     </div>
+    </div>
+      );
+};
 
-  )
-
-}
-export default News
+export default News;
