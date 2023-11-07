@@ -27,28 +27,67 @@ const Header = () => {
   const { setActiveMenu, isClicked, handleClick } = useStateContext();
   const [isLoggedin,setLoggedin] = useState(false)
   const islogin = false;
+  const [userData,setUserData]= useState([]);
+
+  // const [load,setLoad]=useState(0);
   //const navigate=useNavigate();
-  const api ='http://localhost:3000/auth/redirect'
-  useEffect(()=>{
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString)
-    const codeparmas = urlParams.get("/auth/redirect?code")
-    console.log(codeparmas)
-    /*axios.get(api).then((res)=>{
-      console.log(res.data)
-    }).catch((err)=>{
-      console.log(err)
-    })*/
-  },[])
+  //const api ='http://localhost:3000/auth/redirect'
 
-  
-  /*function redirect(){
+  // useEffect(()=>{
+  //   const queryString = window.location.search;
+  //   const urlParams = new URLSearchParams(queryString)
+  //   const codeparmas = urlParams.get("/auth/redirect?code")
+  //   console.log(codeparmas)
+  //   /*axios.get(api).then((res)=>{
+  //     console.log(res.data)
+  //   }).catch((err)=>{
+  //     console.log(err)
+  //   })*/
+  // },[])
 
-    navigate('https://discord.com/oauth2/authorize?client_id=1163117991668482058&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fredirect&response_type=code&scope=identify')
-  }*/
+  // const fetchUserData = async () => {
+  //   try {
+  //     const response = await axios.get('/auth/discord/callback'); // Use the correct URL for your server
+  //     const userData = response.data;
+  //     console.log('User Data:', userData);
+  //     // Use the user data in your React components
+  //   } catch (error) {
+  //     console.error('Error fetching user data:', error);
+  //   }
+  // };
+
+  // function  getdata (){
+  //   ;
+  //   axios.get  ('http://localhost:3000/auth/api/user')
+  //   .then((res)=>{
+  //     console.log(res.data)
+  //   })
+  //   .catch((err)=>{
+  //     console.log(err)
+  //   })
+
+  // } 
+
+  // const getUser = async () =>{
+  //   console.log("after")
+  //   axios.get('http://localhost:3000/auth')
+  //        .then( (res)=>{
+  //        console.log(res.data)
+  //       })
+  // }
+ 
+  // useEffect(  ()=>{
+  //   console.log('Here')
+  //    getUser()
+  // },[load])
+
 
   function logineithdiscord (){
-    window.location.assign('https://discord.com/oauth2/authorize?client_id=1163117991668482058&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fredirect&response_type=code&scope=identify')
+    window.location.assign('http://localhost:3000/auth/redirect')
+  //     axios.get('http://localhost:3000/auth/redirect')
+  //     .then( (res)=>{
+  //     console.log(res.data)
+  //  }).catch((err))
   }
 
 
@@ -93,11 +132,13 @@ const Header = () => {
             </Link> */}
             
           </button>
+          
         </div>
+
     
   )
 }
-      {isClicked.UserProfile && <Userprofile/>}
+      {/* {isClicked.UserProfile && <Userprofile/>} */}
     </div>
   )
 }

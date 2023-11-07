@@ -2,21 +2,24 @@ const router = require('express').Router();
 
 //middleware
 function isAuthorized(req,res,next){
-    if(req.user){
-        console.log("User is logged in");
+    if(!req.user){
+        //console.log("User is logged in");
         //res.redirect('/game')
-        console.log(req.user);
-        next();
+        //console.log(req.user);
+        res.redirect('/auth/redirect')
     }else{
-        console.log("user is not logged in");
-        res.redirect('/login')
+        //console.log(req.query)
+       // console.log("user is not logged in");
+        //res.redirect('/login')
+        next();
     }
 }
 
 
 router.get('/', isAuthorized, (req,res) => {
-  //console.log(req.user)
-    res.send(200)  
+    //console.log(req.user)
+    console.log(req.query)
+    //res.send('Hey i am '+req.user.username)  
 })
 
 module.exports = router;

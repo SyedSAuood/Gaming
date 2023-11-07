@@ -30,13 +30,14 @@ passport.use(new DiscordStrategy({
         const user = await Discorduser.findOne({ discordId:profile.id});
         if(user){
             console.log("user exist")
-            console.log(accessToken)
-            /*const { data:userResponse }  = await axios.get('https://discord.com/api/v10/users/@me',
-            {
-            headers:{
-                    Authorization: `Bearer ${accessToken}`,},
-            })
-            console.log(userResponse);*/
+            //console.log(accessToken)
+            // const { data:userResponse }  = await axios.get('https://discord.com/api/v10/users/@me',
+            //  {
+            //  headers:{
+            //          Authorization: `Bearer ${accessToken}`,},
+            //  }
+            // )
+            // console.log(userResponse);
             done(null,user)
         }else{
         

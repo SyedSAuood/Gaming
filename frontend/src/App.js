@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import axios from 'axios'
 import  Home   from './pages/Home'
 import  Valo from './pages/Valo'
 import  Csgo from './pages/Csgo'
@@ -20,6 +21,10 @@ import Shop from './pages/Shop'
 const App = () => {
   const { activeMenu } = useStateContext()
   const [games, setGames] = useState([]);
+  
+
+
+  
 
   const fetchData = () => {
     fetch('http://localhost:3001/api/gamesData.json')
@@ -34,7 +39,7 @@ const App = () => {
     fetchData()
   }, [])
 
-  
+
   return (
 
     <BrowserRouter>
